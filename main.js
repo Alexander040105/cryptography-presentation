@@ -72,14 +72,21 @@ print(f"The encrypted password is {encrypted_password}")
 const codeEditor1 = document.getElementById('editor1');
 const codeEditor2 = document.getElementById('editor2');
 const codeEditor3 = document.getElementById('editor3');
+
+const cipher1Copy = document.getElementById('c1-button'); 
+const cipher2Copy = document.getElementById('c2-button');
+const cipher3Copy = document.getElementById('c3-button');
+
 const plainDescrip = document.getElementById('plain-descrip');
 const cipherDescrip = document.getElementById('cipher-descrip');
 const encryptionDescrip = document.getElementById('encryption-descrip');
 const decryptionDescrip = document.getElementById('decryption-descrip');
+
 const plainText = document.getElementById('plain-text');
 const cipherText = document.getElementById('cipher-text');
 const encryptionText = document.getElementById('encryption-text');
 const decryptionText = document.getElementById('decryption-text');
+
 const plainHeader = document.getElementById('plain-header');
 const cipherHeader = document.getElementById('cipher-header');
 const encryptionHeader = document.getElementById('encryption-header');
@@ -95,7 +102,7 @@ codeEditor2.editor.updateOptions({readOnly: true});
 codeEditor3.value = pythonSnippet3;
 codeEditor3.editor.updateOptions({readOnly: true});
 
-function showDescription(event){
+const showDescription = (event) => {
     const clickedDiv = event.currentTarget.id;
     if (clickedDiv === 'plain-text'){
         plainDescrip.style.display = 'flex';
@@ -120,10 +127,41 @@ function showDescription(event){
     }
 }
 
+const backToDefaultButton = (defaultButton) => {
+    setTimeout(() => {
+        defaultButton.style.backgroundColor = '#f2f2f2';
+    }, 2000);
+}
+
+const copyToClipboard = (event) => {
+    const clickedButton = event.currentTarget.id;
+    if(clickedButton === 'c1-button'){
+        navigator.clipboard.writeText(pythonSnippet1);
+        cipher1Copy.style.backgroundColor = '#0DF205';
+        backToDefaultButton(cipher1Copy)
+        alert("Copied the code for Reverse Encryption");
+    }else if(clickedButton === 'c2-button'){
+        navigator.clipboard.writeText(pythonSnippet2);
+        cipher2Copy.style.backgroundColor = '#0DF205';
+        backToDefaultButton(cipher2Copy)
+        alert("Copied the code for Ceasar Cipher");
+    }else if(clickedButton === 'c3-button'){
+        navigator.clipboard.writeText(pythonSnippet3);
+        cipher3Copy.style.backgroundColor = '#0DF205';
+        backToDefaultButton(cipher3Copy)
+        alert("Copied the code for ROT13");
+    }
+}
+
+
 plainText.addEventListener('click', showDescription);
 cipherText.addEventListener('click', showDescription);
 encryptionText.addEventListener('click', showDescription);
 decryptionText.addEventListener('click', showDescription);
+
+cipher1Copy.addEventListener('click', copyToClipboard);
+cipher2Copy.addEventListener('click', copyToClipboard);
+cipher3Copy.addEventListener('click', copyToClipboard);
 
 const hideAfter5Seconds = (currentDescrip, currentHeader, currentText) => {
     setTimeout(() => {
@@ -132,4 +170,5 @@ const hideAfter5Seconds = (currentDescrip, currentHeader, currentText) => {
         currentText.style.backgroundColor = '#f2f2f2';
     }, 5000);
 };
+
 

@@ -8,12 +8,14 @@
     font-optical-sizing: auto;
     font-style: normal;
     color: #0DF205;
+    
 }
 
 .contents{
     background-color: #272727 !important;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; 
 }
 
 #plain-text h1, #cipher-text h1, #encryption-text h1, #decryption-text h1{
@@ -87,12 +89,14 @@ p{
 
 
 .ciphers{
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     flex-direction: column;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+    padding: 1rem;
 }
 
 .cipher1, .cipher2, .cipher3{
@@ -103,7 +107,7 @@ p{
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 90%;
-    height: 28rem;
+    height: 35rem;
 }
 
 .cipher5{
@@ -118,6 +122,24 @@ p{
 .cipher5 h1{
     color: #142537;
 }
+
+#c1-button, #c2-button, #c3-button{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    width: auto;
+    height: 4rem;
+    font-size: 1rem;
+    color: #2405F2;
+    border-radius: 1rem;
+    z-index: 100;
+}
+
+.ciphers button:hover{
+    cursor: pointer;
+    background-color: #0DF205;
+}
+
 
 .references{
     height: 20rem;
@@ -135,7 +157,7 @@ p{
 }
 
 
-@media(width >= 50em){
+@media(width >= 60em){
 
     .cryptography-descrip{
         width: 100%;
