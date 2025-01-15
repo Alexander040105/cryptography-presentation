@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Algorithms!</title>
+    <!-- <link rel="stylesheet" href="/2nd_semester/styles.css"> -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+    <div class="contents">
+        <div class="header">
+            <h1>2 Easy Cryptography Algorithms!</h1>
+            <h3>Project by: Alexander Jon S. Solis</h3>
+        </div>
+
+        <div class="cryptography-meaning">
+            <h1>What is Cryptography</h1>
+            <p>
+                Cryptography is defined as the art and science of concealing the message to introduce 
+                privacy and secrecy as recognized in information security.
+            </p>
+        </div>
+
+        <h1 id="terms">Terms to remember in Cryptography</h1>
+
+        <div class="cryptography-descrip">
+            <div>
+                <button id="plain-text" onclick="showDescription(event)">
+                    <h1 id="plain-header">Plain Text</h1>
+                    <p id="plain-descrip">The text you want to encrypt</p>
+                </button>
+                <button id="cipher-text" onclick="showDescription(event)">
+                    <h1 id="cipher-header">Cipher Text</h1>
+                    <p id="cipher-descrip">The message after we encrypt the plain text</p>
+                </button>
+            </div>
+            <div>
+                <button id="encryption-text" onclick="showDescription(event)">
+                    <h1 id="encryption-header">Encryption</h1>
+                    <p id="encryption-descrip">The process of converting plain text to cipher text</p>
+                </button>
+                <button id="decryption-text" onclick="showDescription(event)">
+                    <h1 id="decryption-header">Decryption</h1>
+                    <p id="decryption-descrip">The process of converting back the cipher text to plain text</p>
+                </button>
+            </div>
+        </div>
+
+        <div class="ciphers">
+            <div class="cipher1">
+                <h1>Reverse Encryption</h1>
+                <p>it is the weakest type of Cryptography Algorithm as it is simply making the plain text backwards</p>
+                <wc-monaco-editor id="editor1" language="python" font-size="14px" tab-size="2" style="height: 22rem;"></wc-monaco-editor>
+            </div>
+    
+            <div class="cipher2">
+                <h1>Ceasar Cipher</h1>
+                <p>It is a cipher wherein the plain text is replaced by a letter with some fixed numbeer of poositions down with alphabet</p>
+                <wc-monaco-editor id="editor2" class="editor2" language="python" font-size="14px" tab-size="2" style="height: 21rem;"></wc-monaco-editor>
+            </div>
+            
+            <div class="cipher3">
+                <h1>ROT13 Algorithm</h1>
+                <p>This is a variant of Ceasar Cipher in which the shift is always 13</p>
+                <wc-monaco-editor id="editor3" class="editor3" language="python" font-size="14px" tab-size="2" style="height:30rem;"></wc-monaco-editor>
+            </div>
+            
+            <div class="cipher5">
+                <h1>Test the code here:</h1>
+                <div data-pym-src="https://www.jdoodle.com/embed/v1/149633779dab9938" style="margin-top: 1rem;"></div>
+            </div>
+
+            <div class="references">
+                <h1>References</h1>
+                <ul>
+                    <li>
+                        Cryptography with Python - Overview. (n.d.). <a href="https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_overview.htm">https://www.tutorialspoint.com/cryptography_with_python/cryptography_with_python_overview.htm</a>
+                    </li>
+
+                    <li>
+                        GeeksforGeeks. (2024, May 1). Cryptography Tutorial. GeeksforGeeks.<a href="https://www.geeksforgeeks.org/cryptography-tutorial/">https://www.geeksforgeeks.org/cryptography-tutorial/</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        
+    </div>
+    
+    <script src="https://www.jdoodle.com/assets/jdoodle-pym.min.js" type="text/javascript"> </script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/vanillawc/wc-monaco-editor@1/index.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
