@@ -1,7 +1,5 @@
 //reverse encryption
 const pythonSnippet1 = `
-#reverse cipher
-#Drawback - it is weak and easy to decript
 user_password = input("Enter the password: ")
 def reverse_cipher(password):
     pass_reversed = ""

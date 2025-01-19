@@ -87,6 +87,12 @@ p{
     color: #0d0d0d;
 }
 
+.ascii{
+    width:auto; 
+    height: 20rem;
+    margin-bottom: 5rem; 
+    border-radius: 1.5rem;
+}
 
 .ciphers{
     position: relative;
@@ -143,11 +149,16 @@ p{
 
 .references{
     height: 20rem;
-    width: 85%;
+    width: 80%;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 1rem;
+}
+
+.references ul{
     padding: 1rem;
 }
 
@@ -182,5 +193,12 @@ p{
 
     .header h3{
         font-size: 1.75rem;
+    }
+
+    .ascii{
+        width:auto; 
+        height: 40rem;
+        margin-bottom: 5rem; 
+        border-radius: 1.5rem;
     }
 }
